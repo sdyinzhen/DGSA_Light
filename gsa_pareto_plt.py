@@ -1,6 +1,7 @@
 #Author: David Zhen Yin
 #Contact: yinzhen@stanford.edu
 #Date: August 17, 2019
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
