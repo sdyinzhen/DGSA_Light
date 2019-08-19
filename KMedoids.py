@@ -14,6 +14,7 @@ def _get_init_centers(n_clusters, n_samples):
         if not _ in init_ids:
             init_ids.append(_)
     return init_ids
+	
 def _get_cost(dist_meds, currentMedoids):
     '''return total cost and cost of each cluster
     -----
