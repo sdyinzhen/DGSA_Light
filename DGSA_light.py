@@ -46,7 +46,8 @@ def DGSA_light(parameters, responses, ParametersNames = 0, n_clsters = 3, n_boot
     '''STEP 2.3 Calculate the L1 norm for the n bootstraps'''
     def L1norm_Nboots(k,p):
         '''Define function to calculate L1-norm distances for N boostrap sampling'''        
-        parameters_Nb = parameters[np.random.choice(len(parameters), len(clsters[k]))]
+        parameters_Nb = parameters[np.random.choice(len(parameters), len(clsters[k]), replace=False)]
+         '''Note: replacement currently set as "False" - This is not Bootstrap.'''
         L1norm_Nb[p,k, :] = np.sum(abs(np.percentile(parameters_Nb, percentiles, axis=0) - cdf_parameters), axis=0)
         return L1norm_Nb[p,k, :]
     L1norm_Nb = np.zeros((n_boots, n_clsters, n_parameters))
