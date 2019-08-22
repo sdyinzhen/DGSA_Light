@@ -8,7 +8,7 @@ import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
 
-def DGSA_light(parameters, responses, ParametersNames = 0, n_clsters = 3, n_boots = 3000,):
+def DGSA_light(parameters, responses, ParametersNames = 0, n_clsters = 3, n_boots = 3000):
     '''
     Main function of DGSA light version
     Parameters
